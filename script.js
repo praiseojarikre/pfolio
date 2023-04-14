@@ -51,3 +51,20 @@ ScrollReveal().reveal('.home-content, .heading',{ origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form',{ origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img',{ origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content',{ origin: 'right' });
+
+
+function toggleReadMore() {
+    var dots = document.querySelector(".readmore p span");
+    var moreText = document.querySelector(".readmore p.more");
+    var btnText = document.querySelector(".readmore button");
+    
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+    }
+}
